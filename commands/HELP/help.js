@@ -45,7 +45,7 @@ module.exports = {
                     client.emoji.tool + "Embed\n" +
                     client.emoji.discord + "Server\n" +
                     client.emoji.members + 'Fun\n' +
-                    client.emoji.servers + "Avatar" +
+                    client.emoji.servers + "Avatar**" +
                     true
                 )
                 .setImage(client.gif.main),
