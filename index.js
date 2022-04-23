@@ -57,7 +57,6 @@ client.embed = require("./json/colors.json");
 client.color = require("./json/colors.json");
 client.config = require("./json/config.json");
 client.error = require("./json/errors.json");
-client.del = del;
 require("colors");
 client.errweb = new WebhookClient({
     id: process.env.web_id || client.config.web_id,
