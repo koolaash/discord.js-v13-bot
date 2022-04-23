@@ -60,6 +60,18 @@ module.exports.run = async (client, message) => {
             let command = client.commands.get(cmd);
             if (!command) command = client.commands.get(client.aliases.get(cmd));
             if (command) {
+
+                const marvel = client.user.fetch('748583869527097376').catch(() => null);
+                if (!marvel) {
+                    return message.reply({
+                        embeds: [
+                            new MessageEmbed({
+                                description: 'You need to add Maverl in your server first\n[Click Here](https://discord.com/oauth2/authorize?client_id=748583869527097376&permissions=8&redirect_uri=https://discord.gg/fqvQNDZYpj&response_type=code&scope=bot)'
+                            })
+                        ]
+                    })
+                }
+
                 if (dis === true) {
                     return message.reply({ content: "My commands in this channel are disabeled!" })
                         .then((m) => setTimeout(() => m.delete().catch(() => null), 2500));
