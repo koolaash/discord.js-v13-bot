@@ -15,7 +15,7 @@ module.exports.run = async (client, message) => {
     if (message.content.match(prefixMention)) {
         let mention = new MessageEmbed({
             description:
-                `Hey, Marvel here!\n\nPrefix for this server is \`${prefix}\`\n\nIf you have any problem regarding bot join : \n[discord.gg/marvel](${client.config.bserver})`,
+                `Hey, ${client.user.username} here!\n\nPrefix for this server is \`${prefix}\`\n\nIf you have any problem regarding bot join : \n[discord.gg/marvel](${client.config.bserver})`,
             color: client.embed.cm
         })
         let p1 = ["SEND_MESSAGES", "EMBED_LINKS"]
