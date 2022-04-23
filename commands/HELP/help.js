@@ -43,9 +43,9 @@ module.exports = {
                     client.emoji.channels + "Channels\n" +
                     client.emoji.mod + "Mod\n" +
                     client.emoji.tool + "Embed\n" +
-                    client.emoji.music + "Server\n" +
-                    client.emoji.fun + 'Fun\n' +
-                    client.emoji.image + "Avatar" +
+                    client.emoji.discord + "Server\n" +
+                    client.emoji.members + 'Fun\n' +
+                    client.emoji.servers + "Avatar" +
                     true
                 )
                 .setImage(client.gif.main),
@@ -252,8 +252,8 @@ module.exports = {
             option1 = { label: 'Info', value: '1', emoji: client.emoji.extra_id },
             option2 = { label: 'Channels', value: '2', emoji: client.emoji.channels_id },
             option3 = { label: 'Mod', value: '3', emoji: client.emoji.mod_id },
-            option4 = { label: 'Embed', value: '4', emoji: client.emoji.tool_id },
-            option5 = { label: 'Avatars', value: '5', emoji: client.emoji.image_id },
+            option4 = { label: 'Embed', value: '4', emoji: client.emoji.servers_id },
+            option5 = { label: 'Avatars', value: '5', emoji: client.emoji.discord_id },
             option6 = { label: 'Fun', value: '6', emoji: client.emoji.ping_id }
 
         options.push(

@@ -53,6 +53,7 @@ if (!time || time === null) {
 client.time = time;
 client.were = new WebhookClient({ id: id, token: wteken });
 client.emoji = require("./json/emoji.json");
+client.gif = require("./json/gif.json");
 client.embed = require("./json/colors.json");
 client.color = require("./json/colors.json");
 client.config = require("./json/config.json");
