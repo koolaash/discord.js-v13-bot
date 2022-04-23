@@ -38,7 +38,8 @@ const Discord = require("discord.js"),
             'GUILD_MEMBER',
             'USER'
         ]
-    })
+    }),
+    db = require('quick.db')
 
 client.commands = new Collection();
 client.aliases = new Collection();
