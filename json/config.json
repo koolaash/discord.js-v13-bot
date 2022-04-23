@@ -1,0 +1,19 @@
+{
+    "TOKEN": "",
+    "web_id": "",
+    "web_token": "",
+    "prefix": ",",
+    "pprefix": ",",
+    "status_text": "'help | Damon 🖤#6667",
+    "status_type": "LISTENING",
+    "binvite": "https://discord.com/oauth2/authorize?client_id=748583869527097376&permissions=8&redirect_uri=https://discord.gg/fqvQNDZYpj&response_type=code&scope=bot",
+    "bserver": "https://discord.gg/djrPQaczPw",
+    "bwebsite": "https://www.marvelbot.tk",
+    "bowner": [
+        "672027578181353473"
+    ],
+    "owner_profile": "https://discord.com/users/672027578181353473",
+    "owner_tag": "Damon 🖤#6667",
+    "damon_id": "672027578181353473",
+    "bvote": "https://top.gg/bot/748583869527097376/vote"
+}
