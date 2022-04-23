@@ -8,16 +8,8 @@ const Discord = require("discord.js"),
 module.exports.run = async (client, message) => {
     if (message.author.bot || !message.guild) return;
     let dis = db.get(`disabeled${message.channel.id}`),
-        prefixModel = client.prefixModel,
-        prefixData = await prefixModel.findOne({
-            GuildID: message.guild.id,
-        }).catch(err => console.log(err))
-
-    if (prefixData) {
-        var prefix = prefixData.Prefix
-    } else if (!prefixData) {
         prefix = client.config.prefix
-    }
+
 
     const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(prefixMention)) {
