@@ -4,7 +4,7 @@ const { MessageEmbed, Collection } = require("discord.js"),
 
 module.exports = {
     name: "removerole",
-    aliases: ["-role", "rrole"],
+    aliases: ["-role", "rrole", "rr"],
     description: "Assigns Mentioned Role To The Members",
     category: "MODERATION",
     usage: "removerole",
@@ -34,7 +34,7 @@ module.exports = {
                         .addField(name + " all", `\`${name} <Role> all\``, true)
                         .addField(name + " bots", `\`${name} <Role> bots\``, true)
                         .addField(name + " humans", `\`${name} <Role> humans\``, true)
-                        .setFooter({ text: "Aliases : role+ , addrole , role" })
+                        .setFooter({ text: "Aliases : -role , rrole , rr" })
                 ]
             });
 
