@@ -33,7 +33,7 @@ module.exports = {
                 .setDescription(
                     `• Prefix for this server is ${p}\n` +
                     `• Total commands: ${client.config.commands}\n` +
-                    `• [Get Marvel](${client.config.binvite}) | [Support server](${client.config.bserver}) | [Vote Marvel](${client.commands.size})\n` +
+                    `• [Get Marvel](${client.config.binvite}) | [Support server](${client.config.bserver}) | [Vote Marvel](${client.commands.length})\n` +
                     `• Type \`${p}help <command | module>\` for more info.`
                 )
                 .addField(
