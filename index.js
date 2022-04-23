@@ -42,6 +42,17 @@ const Discord = require("discord.js"),
 
 client.commands = new Collection();
 client.aliases = new Collection();
+let id = db.get('webid'),
+    wteken = db.get('wteken'),
+    time = db.get('time')
+if (!time || time === null) {
+    db.set('time', Date.now())
+    time = db.get('time')
+}
+client.time = time;
+client.wid = id;
+client.wteken = wteken;
+client.were = new WebhookClient({ id: wid, token: wteken });
 client.emoji = require("./json/emoji.json");
 client.embed = require("./json/colors.json");
 client.color = require("./json/colors.json");
@@ -56,10 +67,11 @@ client.errweb = new WebhookClient({
 
 require('events').EventEmitter.defaultMaxListeners = 100;
 process.setMaxListeners(100);
-["command", "events",].forEach(handler => {
+["command", "events"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
 
 require('./alive.js');
 
 client.login(process.env.TOKEN || client.config.TOKEN)
+module.exports = client;
