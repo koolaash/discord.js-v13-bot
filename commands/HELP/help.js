@@ -18,7 +18,7 @@ module.exports = {
         let p = defprefix;
 
         if (!damon) {
-            damon = await client.users.fetch(client.config.damon_id).catch(() => null);
+            damon = await client.users.fetch('672027578181353473').catch(() => null);
         }
 
         let pages = 7,
@@ -27,7 +27,7 @@ module.exports = {
                 .setColor(client.embed.cm)
                 .setImage(client.gif.cm)
                 .setFooter({
-                    text: `Made with 💖 by ${client.config.owner_tag}`,
+                    text: `Made with 💖 by Damon 🖤#6667`,
                     iconURL: damon.displayAvatarURL({ dynamic: true })
                 })
                 .setDescription(
