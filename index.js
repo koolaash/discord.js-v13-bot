@@ -51,9 +51,7 @@ if (!time || time === null) {
     time = db.get('time')
 }
 client.time = time;
-client.wid = id;
-client.wteken = wteken;
-client.were = new WebhookClient({ id: wid, token: wteken });
+client.were = new WebhookClient({ id: id, token: wteken });
 client.emoji = require("./json/emoji.json");
 client.embed = require("./json/colors.json");
 client.color = require("./json/colors.json");
