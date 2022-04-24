@@ -12,13 +12,13 @@ module.exports = {
     async run(client, message, args) {
         let embed = new MessageEmbed()
 
-            .setTitle(
+        .setTitle(
                 `${client.emoji.bot}| ${client.user.username}'s Invite | Support Menu`
             )
             .setDescription(
                 `${client.emoji.ar}Join Our Discord Server For Any Kind Of Help`)
 
-            .addField(
+        .addField(
                 `${client.emoji.invite}| Invite`,
                 `[discord.gg/invite](${client.config.binvite})`
             )
@@ -27,37 +27,37 @@ module.exports = {
                 `[discord.gg/support](${client.config.bserver})`
             )
             .setThumbnail(client.user.displayAvatarURL())
-            .setColor(client.embed.cm)
+            .setColor(000000)
             .setFooter({
                 text: message.author.tag,
                 iconURL: message.author.displayAvatarURL({ dynamic: true })
             }),
             btn1 = new MessageButton()
-                .setStyle("LINK")
-                .setLabel("|  SUPPORT")
-                .setURL(client.config.bserver)
-                .setEmoji(client.emoji.discord_id)
-                .setDisabled(false),
+            .setStyle("LINK")
+            .setLabel("|  SUPPORT")
+            .setURL(client.config.bserver)
+            .setEmoji(client.emoji.discord_id)
+            .setDisabled(false),
             btn2 = new MessageButton()
-                .setStyle("LINK")
-                .setLabel("|  INVITE")
-                .setURL(client.config.binvite)
-                .setEmoji(client.emoji.invite_id)
-                .setDisabled(false),
+            .setStyle("LINK")
+            .setLabel("|  INVITE")
+            .setURL(client.config.binvite)
+            .setEmoji(client.emoji.invite_id)
+            .setDisabled(false),
             btn3 = new MessageButton()
-                .setStyle("LINK")
-                .setLabel("|  WEBSITE")
-                .setURL(client.config.bwebsite)
-                .setEmoji(client.emoji.dm_id)
-                .setDisabled(false),
+            .setStyle("LINK")
+            .setLabel("|  WEBSITE")
+            .setURL(client.config.bwebsite)
+            .setEmoji(client.emoji.dm_id)
+            .setDisabled(false),
             btn4 = new MessageButton()
-                .setStyle("LINK")
-                .setLabel("|  VOTE")
-                .setURL(client.config.bvote)
-                .setEmoji(client.emoji.discord_id)
-                .setDisabled(false),
+            .setStyle("LINK")
+            .setLabel("|  VOTE")
+            .setURL(client.config.bvote)
+            .setEmoji(client.emoji.discord_id)
+            .setDisabled(false),
             row = new MessageActionRow()
-                .addComponents(btn1, btn2, btn3, btn4);
+            .addComponents(btn1, btn2, btn3, btn4);
 
         return message.reply({
             components: [row],

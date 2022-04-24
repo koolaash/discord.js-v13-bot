@@ -13,8 +13,8 @@ module.exports = {
     botPermissions: ["EMBED_LINKS"],
     aliases: ['about', 'ping', 'info'],
 
-    run: async (client, message) => {
-        cpuStat.usagePercent(async function (err, percent, seconds) {
+    run: async(client, message) => {
+        cpuStat.usagePercent(async function(err, percent, seconds) {
             if (err) {
                 return console.log(err);
             }
@@ -31,62 +31,50 @@ module.exports = {
                 .setTitle(`${client.user.username} STATS`)
                 .addField(
                     client.emoji.dev + "| DEVELOPER",
-                    `[${client.config.owner_tag}](${client.config.owner_profile}) [<@!${bowner}>]`
+                    `<@!${bowner}> <@!922796780071051304>`
                 )
-                .addFields(
-                    {
-                        name: client.emoji.uptime + '| Uptime',
-                        value: `┕\`${duration}\``,
-                        inline: true
-                    },
-                    {
-                        name: client.emoji.mod + '| Memory',
-                        value: `┕\`${memory}\``,
-                        inline: true
-                    },
-                    {
-                        name: client.emoji.channels + "| Channels",
-                        value: `┕\`${client.channels.cache.size}\``,
-                        inline: true
-                    }
-                )
-                .addFields(
-                    {
-                        name: client.emoji.servers + '| Servers',
-                        value: `┕\`${client.guilds.cache.size}\``,
-                        inline: true
-                    },
-                    {
-                        name: client.emoji.members + '| Users',
-                        value: `┕\`${client.guilds.cache.reduce(
+                .addFields({
+                    name: client.emoji.uptime + '| Uptime',
+                    value: `┕\`${duration}\``,
+                    inline: true
+                }, {
+                    name: client.emoji.mod + '| Memory',
+                    value: `┕\`${memory}\``,
+                    inline: true
+                }, {
+                    name: client.emoji.channels + "| Channels",
+                    value: `┕\`${client.channels.cache.size}\``,
+                    inline: true
+                })
+                .addFields({
+                    name: client.emoji.servers + '| Servers',
+                    value: `┕\`${client.guilds.cache.size}\``,
+                    inline: true
+                }, {
+                    name: client.emoji.members + '| Users',
+                    value: `┕\`${client.guilds.cache.reduce(
                             (p, n) => p + n.memberCount,
                             0)}\` Total\n` +
-                            `┕\`${client.users.cache.size}\` Cached`,
-                        inline: true
-                    },
-                    {
-                        name: client.emoji.support + '| API Latency',
-                        value: `┕\`${message.client.ws.ping}ms\``,
-                        inline: true
-                    }
-                )
-                .addFields(
-                    {
-                        name: client.emoji.bot + '| Version',
-                        value: `┕\`v${require('../../package.json').version}\``,
-                        inline: true
-                    },
-                    {
-                        name: client.emoji.js + '| Discord.js',
-                        value: `┕\`${version}\``,
-                        inline: true
-                    },
-                    {
-                        name: client.emoji.extra + '| Node',
-                        value: `┕\`${process.version}\``,
-                        inline: true
-                    }
-                )
+                        `┕\`${client.users.cache.size}\` Cached`,
+                    inline: true
+                }, {
+                    name: client.emoji.support + '| API Latency',
+                    value: `┕\`${message.client.ws.ping}ms\``,
+                    inline: true
+                })
+                .addFields({
+                    name: client.emoji.bot + '| Version',
+                    value: `┕\`v${require('../../package.json').version}\``,
+                    inline: true
+                }, {
+                    name: client.emoji.js + '| Discord.js',
+                    value: `┕\`${version}\``,
+                    inline: true
+                }, {
+                    name: client.emoji.extra + '| Node',
+                    value: `┕\`${process.version}\``,
+                    inline: true
+                })
             embed.setThumbnail(client.user.displayAvatarURL())
                 .setFooter({
                     text: message.author.tag,
