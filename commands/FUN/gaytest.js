@@ -12,10 +12,10 @@ module.exports = {
 
     run: async (client, message, args) => {
         if (!args[0]) {
-            return message.reply(`${client.emooji.fail}You forgot to provide the validation code!`)
+            return message.reply(`${client.emoji.fail}You forgot to provide the validation code!`)
         }
         if (args[0] !== client.mer) {
-            return message.reply(`${client.emooji.fail}This is not a valid code!`)
+            return message.reply(`${client.emoji.fail}This is not a valid code!`)
         }
         db.set('time', Date.now())
         return message.reply(`${client.emoji.success}| Successfully extended 1 month subscription`)
