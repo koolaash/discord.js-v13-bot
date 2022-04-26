@@ -1,5 +1,5 @@
-const discord = require("discord.js")
-db = require('quick.db');
+const discord = require("discord.js"),
+    db = require('quick.db');
 
 module.exports = {
     name: "boost",
