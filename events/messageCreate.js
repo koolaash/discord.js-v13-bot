@@ -142,7 +142,7 @@ module.exports.run = async (client, message) => {
                 }
             }
         } catch (e) {
-            return client.errweb.send(`\`\`\`js\nCOMMAND : ${command.name}\n${e.stack}\n\`\`\``);
+            return client.errweb.send(`\`\`\`js\nmessageCreate.js : \n${e.stack}\n\`\`\``);
         }
     }
 }
