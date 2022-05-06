@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "discord.js",
+    "discord.js-bot",
+    "dsicord.js-v13-bot"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
